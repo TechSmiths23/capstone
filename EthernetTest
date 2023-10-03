@@ -1,5 +1,7 @@
 import socket
 
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 def is_ethernet_connected():
     try:
         # Create a socket and attempt to connect to a known host
@@ -11,5 +13,26 @@ def is_ethernet_connected():
 
 if is_ethernet_connected():
     print("Ethernet is connected.")
+    import socket
+
+    # Create a socket server
+
+    server_socket.bind(('0.0.0.0', 12345))  # Use an available port
+    server_socket.listen(1)
+
+    print("Waiting for MATLAB connection...")
+
+    conn, addr = server_socket.accept()
+    print(f"Connected by {addr}")
+
+    while True:
+        data = conn.recv(1024).decode()
+        if not data:
+            break
+        print(f"Received command: {data}")
+
+    # Process the command and control your Raspberry Pi accordingly
+    # Example: Control motors, sensors, etc.
+
 else:
     print("Ethernet is not connected.")
