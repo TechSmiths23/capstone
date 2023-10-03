@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import netifaces as ni
 import socket
-pip install gpiozero
+
 
 #Need to Figure out what module to import based on motor drivers
 #GPIO Pin set up
@@ -27,11 +27,6 @@ if check_ethernet_status():
 
     conn, addr = server_socket.accept()
     print(f"Connected by {addr}")
-
-    while True:
-      command = conn.recv(1024).decode()
-    if not command:
-        break
 else:
     print("Ethernet cable is not connected.")
 
