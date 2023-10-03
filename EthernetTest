@@ -1,0 +1,15 @@
+import socket
+
+def is_ethernet_connected():
+    try:
+        # Create a socket and attempt to connect to a known host
+        socket.create_connection(("www.google.com", 80))
+        return True
+    except OSError:
+        pass
+    return False
+
+if is_ethernet_connected():
+    print("Ethernet is connected.")
+else:
+    print("Ethernet is not connected.")
