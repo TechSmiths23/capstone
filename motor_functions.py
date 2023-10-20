@@ -4,12 +4,12 @@ import time
 # Set the GPIO mode
 GPIO.setmode(GPIO.BCM)
 
-# Define the pins for the H-bridges
-down_pins = [17, 18]  # Example GPIO pins for the down H-bridges
-forward_pins = [22, 23]  # Example GPIO pins for the forward H-bridges
-backward_pins = [24, 25]  # Example GPIO pins for the backward H-bridges
-turn_left_pins = [5, 6]  # Example GPIO pins for the turn left H-bridges
-turn_right_pins = [12, 13]  # Example GPIO pins for the turn right H-bridges
+# Define the pins for the H-bridges (current GPIO pins are from LED test)
+down_pins = [23,24]  # Example GPIO pins for the down H-bridges
+forward_pins = [27,25]  # Example GPIO pins for the forward H-bridges
+backward_pins = [17,22]  # Example GPIO pins for the backward H-bridges
+turn_left_pins = [27,22]  # Example GPIO pins for the turn left H-bridges
+turn_right_pins = [17,25]  # Example GPIO pins for the turn right H-bridges
 
 # Initialize all the H-bridge pins
 all_pins = down_pins + forward_pins + backward_pins + turn_left_pins + turn_right_pins
