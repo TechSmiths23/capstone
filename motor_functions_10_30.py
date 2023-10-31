@@ -131,19 +131,19 @@ while(1):
 
     elif x=='l':
         print("turn left")
-       # GPIO.output(IN1,GPIO.HIGH)
-       # GPIO.output(IN2,GPIO.LOW)
-       # GPIO.output(IN3,GPIO.HIGH)
-       # GPIO.output(IN2,GPIO.LOW)
+        GPIO.output(IN11,GPIO.HIGH) #motor 3
+        GPIO.output(IN12,GPIO.LOW) #motor 3
+        GPIO.output(IN5,GPIO.HIGH)  #motor 5
+        GPIO.output(IN6,GPIO.LOW) #motor 5
         temp1=1
         x='z'
 
      elif x=='r':
         print("turn right")
-       # GPIO.output(IN1,GPIO.HIGH)
-       # GPIO.output(IN2,GPIO.LOW)
-       # GPIO.output(IN1,GPIO.HIGH)
-       # GPIO.output(IN2,GPIO.LOW)
+        GPIO.output(IN3,GPIO.HIGH)  #motor 2
+        GPIO.output(IN4,GPIO.LOW)  #motor 2
+        GPIO.output(IN9,GPIO.HIGH) #motor6 
+        GPIO.output(IN10,GPIO.LOW)  #motor 6
         temp1=1
         x='z'
 
