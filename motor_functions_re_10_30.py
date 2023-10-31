@@ -145,7 +145,7 @@ while True:
         # Your code here
         x = 'z'
 
-    elif x == '1':
+    elif x == 'low':
         print("low-1")
         p1.ChangeDutyCycle(25)
         p2.ChangeDutyCycle(25)
@@ -155,7 +155,7 @@ while True:
         p6.ChangeDutyCycle(25)
         x = 'z'
 
-    elif x == '2':
+    elif x == 'med':
         print("medium-2")
         p1.ChangeDutyCycle(50)
         p2.ChangeDutyCycle(50)
@@ -165,7 +165,7 @@ while True:
         p6.ChangeDutyCycle(50)
         x = 'z'
 
-    elif x == '3':
+    elif x == 'high':
         print("high-3")
         p1.ChangeDutyCycle(75)
         p2.ChangeDutyCycle(75)
