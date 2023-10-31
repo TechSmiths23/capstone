@@ -102,7 +102,7 @@ print("The default speed & direction of the motor is LOW & Forward.....")
 print("r-run s-stop f-forward b-backward l-low m-medium h-high e-exit")
 print("\n")
 
-while True:
+while (1):
     x = input()
 
     if x == 'r':
