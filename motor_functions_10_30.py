@@ -17,11 +17,13 @@ END = 24
 IN7 = 6
 IN8 = 12
 #motor 6
-in9 = 17
-in10 = 5
+ENE = 7
+IN9 = 17
+IN10 = 5
 #motor 3
-in11 = 4
-in12 = 25
+ENF = 8
+IN11 = 4
+IN12 = 25
 
 temp1=1
 GPIO.setmode(GPIO.BCM)
@@ -45,10 +47,13 @@ GPIO.setup(END,GPIO.OUT)
 #gpio pin set up for motor 5
 GPIO.setup(IN9,GPIO.OUT)
 GPIO.setup(IN10,GPIO.OUT)
+GPIO.setup(ENE,GPIO.OUT)
 #gpio pin set up for motor 6
 GPIO.setup(IN11,GPIO.OUT)
 GPIO.setup(IN12,GPIO.OUT)
+GPIO.setup(ENE,GPIO.OUT)
 
+#output setup:
 GPIO.output(IN1,GPIO.LOW)
 GPIO.output(IN2,GPIO.LOW)
 
@@ -71,11 +76,15 @@ p1=GPIO.PWM(ENA,1000)
 p2=GPIO.PWM(ENB,1000)
 p3=GPIO.PWM(ENC,1000)
 p4=GPIO.PWM(END,1000)
+p5=GPIO.PWM(ENE,1000)
+p6=GPIO.PWM(ENF,1000)
 
 p1.start(25)
 p2.start(25)
 p3.start(25)
 p4.start(25)
+p5.start(25)
+p6.start(25)
 
 print("\n")
 print("The default speed & direction of motor is LOW & Forward.....")
@@ -115,8 +124,8 @@ while(1):
         print("reverse")
         GPIO.output(IN9,GPIO.HIGH) #motor 6
         GPIO.output(IN10,GPIO.LOW) #motor 6
-        GPIO.output(IN1,GPIO.HIGH) # motor 3
-        GPIO.output(IN2,GPIO.LOW)  #motor 3
+        GPIO.output(IN11,GPIO.HIGH) # motor 3
+        GPIO.output(IN12,GPIO.LOW)  #motor 3
         temp1=1
         x='z' 
 
@@ -140,17 +149,32 @@ while(1):
 
     elif x=='1':
         print("low-1")
-        p.ChangeDutyCycle(25)
+        p1.ChangeDutyCycle(25)
+        p2.ChangeDutyCycle(25)
+        p3.ChangeDutyCycle(25)
+        p4.ChangeDutyCycle(25)
+        p5.ChangeDutyCycle(25)
+        p6.ChangeDutyCycle(25)
         x='z'
 
     elif x=='2':
         print("medium-2")
-        p.ChangeDutyCycle(50)
+        p1.ChangeDutyCycle(50)
+        p2.ChangeDutyCycle(50)
+        p3.ChangeDutyCycle(50)
+        p4.ChangeDutyCycle(50)
+        p5.ChangeDutyCycle(50)
+        p6.ChangeDutyCycle(50)
         x='z'
 
     elif x=='3':
         print("high-3")
-        p.ChangeDutyCycle(75)
+        p1.ChangeDutyCycle(75)
+        p2.ChangeDutyCycle(75)
+        p3.ChangeDutyCycle(75)
+        p4.ChangeDutyCycle(75)
+        p5.ChangeDutyCycle(75)
+        p6.ChangeDutyCycle(75)
         x='z'
      
     
