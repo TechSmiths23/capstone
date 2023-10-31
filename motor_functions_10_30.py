@@ -51,7 +51,7 @@ GPIO.setup(ENE,GPIO.OUT)
 #gpio pin set up for motor 6
 GPIO.setup(IN11,GPIO.OUT)
 GPIO.setup(IN12,GPIO.OUT)
-GPIO.setup(ENE,GPIO.OUT)
+GPIO.setup(ENF,GPIO.OUT)
 
 #output setup:
 GPIO.output(IN1,GPIO.LOW)
@@ -109,6 +109,16 @@ while(1):
         print("stop")
         GPIO.output(IN1,GPIO.LOW)
         GPIO.output(IN2,GPIO.LOW)
+        GPIO.output(IN3,GPIO.LOW)
+        GPIO.output(IN4,GPIO.LOW)
+        GPIO.output(IN5,GPIO.LOW)
+        GPIO.output(IN6,GPIO.LOW)
+        GPIO.output(IN7,GPIO.LOW)
+        GPIO.output(IN8,GPIO.LOW)
+        GPIO.output(IN9,GPIO.LOW)
+        GPIO.output(IN10,GPIO.LOW)
+        GPIO.output(IN11,GPIO.LOW)
+        GPIO.output(IN12,GPIO.LOW)
         x='z'
 
     elif x=='f':
