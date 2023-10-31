@@ -1,51 +1,51 @@
 import RPi.GPIO as GPIO          
 from time import sleep
-//motor 1
+#motor 1
 ENA = 18
 IN1 = 22
 IN2 = 23
-//motor 2 
-ENB = 18
-IN3 = 22
-IN4 = 23
-//motor 3
-ENC = 18
-IN5 = 22
-IN6 = 23
-//motor 4
-END = 1
-IN7 = 22
-IN8 = 23
-//motor 5
+#motor 2 
+ENB = 19
+IN3 = 20
+IN4 = 16
+#motor5
+ENC = 13
+IN5 = 21
+IN6 = 27
+#motor 4
+END = 24
+IN7 = 6
+IN8 = 12
+#motor 6
 in9 = 17
 in10 = 5
-//motor 6
+#motor 3
 in11 = 4
 in12 = 25
 
 temp1=1
 GPIO.setmode(GPIO.BCM)
 
-//gpio pin set up motor1 pmw
+#gpio pin set up motor1 pmw
 GPIO.setup(IN1,GPIO.OUT)
 GPIO.setup(IN2,GPIO.OUT)
 GPIO.setup(ENA,GPIO.OUT)
-//gpio pin set up motor2 pmw
+#gpio pin set up motor2 pmw
 GPIO.setup(IN3,GPIO.OUT)
 GPIO.setup(IN4,GPIO.OUT)
 GPIO.setup(ENB,GPIO.OUT)
-//gpio pin set up motor3 pmw
+#gpio pin set up motor3 pmw
 GPIO.setup(IN5,GPIO.OUT)
 GPIO.setup(IN6,GPIO.OUT)
 GPIO.setup(ENC,GPIO.OUT)
-//gpio pin set up motor4 pwm
+#gpio pin set up motor4 pwm
 GPIO.setup(IN7,GPIO.OUT)
 GPIO.setup(IN8,GPIO.OUT)
 GPIO.setup(END,GPIO.OUT)
-//gpio pin set up for motor 5
+#gpio pin set up for motor 5
 GPIO.setup(IN9,GPIO.OUT)
 GPIO.setup(IN10,GPIO.OUT)
-//gpio pin set up for motor 6
+#gpio pin set up for motor 6
 GPIO.setup(IN11,GPIO.OUT)
 GPIO.setup(IN12,GPIO.OUT)
 
@@ -89,10 +89,10 @@ while(1):
     if x=='r':
         print("run")
         if(temp1==1):
-         GPIO.output(IN1,GPIO.HIGH) 
-         GPIO.output(IN2,GPIO.LOW)
-         GPIO.output(IN1,GPIO.HIGH) 
-         GPIO.output(IN2,GPIO.LOW)
+         GPIO.output(IN1,GPIO.HIGH) #motor 1
+         GPIO.output(IN2,GPIO.LOW)  #motor 1
+         GPIO.output(IN7,GPIO.HIGH) #motor 4
+         GPIO.output(IN8,GPIO.LOW) #motor 4
          print("forward")
          x='z'
 
@@ -104,37 +104,37 @@ while(1):
 
     elif x=='f':
         print("forward")
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
+        GPIO.output(IN3,GPIO.HIGH) #motor 2
+        GPIO.output(IN4,GPIO.LOW)  #motor 2
+        GPIO.output(IN5,GPIO.HIGH) #motor 5
+        GPIO.output(IN6,GPIO.LOW)  #motor 5
         temp1=1
         x='z'
 
     elif x=='r':
         print("reverse")
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
+        GPIO.output(IN9,GPIO.HIGH) #motor 6
+        GPIO.output(IN10,GPIO.LOW) #motor 6
+        GPIO.output(IN1,GPIO.HIGH) # motor 3
+        GPIO.output(IN2,GPIO.LOW)  #motor 3
         temp1=1
         x='z' 
 
     elif x=='l':
         print("turn left")
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
+       # GPIO.output(IN1,GPIO.HIGH)
+       # GPIO.output(IN2,GPIO.LOW)
+       # GPIO.output(IN3,GPIO.HIGH)
+       # GPIO.output(IN2,GPIO.LOW)
         temp1=1
         x='z'
 
      elif x=='r':
         print("turn right")
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
-        GPIO.output(IN1,GPIO.HIGH)
-        GPIO.output(IN2,GPIO.LOW)
+       # GPIO.output(IN1,GPIO.HIGH)
+       # GPIO.output(IN2,GPIO.LOW)
+       # GPIO.output(IN1,GPIO.HIGH)
+       # GPIO.output(IN2,GPIO.LOW)
         temp1=1
         x='z'
 
