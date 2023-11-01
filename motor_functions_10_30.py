@@ -1,13 +1,13 @@
 import RPi.GPIO as GPIO          
 from time import sleep
 #motor 1
-ENA = 18
-IN1 = 22
-IN2 = 23
+ENA = 8
+IN1 = 4
+IN2 = 25
 #motor 2 
-ENB = 19
-IN3 = 20
-IN4 = 16
+ENB = 7
+IN3 = 17
+IN4 = 5
 #motor5
 ENC = 13
 IN5 = 21
@@ -17,13 +17,13 @@ END = 24
 IN7 = 6
 IN8 = 12
 #motor 6
-ENE = 7
-IN9 = 17
-IN10 = 5
+ENE = 10
+IN9 = 20
+IN10 = 16
 #motor 3
-ENF = 8
-IN11 = 4
-IN12 = 25
+ENF = 18
+IN11 = 23
+IN12 = 22
 
 temp1=1
 GPIO.setmode(GPIO.BCM)
