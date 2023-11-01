@@ -19,7 +19,7 @@ IN8 = 12
 #motor 6
 ENE = 10
 IN9 = 20
-IN10 = 16
+IN10 = 14
 #motor 3
 ENF = 18
 IN11 = 23
