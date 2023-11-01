@@ -95,7 +95,7 @@ while(1):
 
     x=input()
     
-    if x=='r'
+    if x=='r':
 				print("run")
 				if(temp1==1):
          GPIO.output(IN1,GPIO.HIGH) #motor 1
@@ -129,15 +129,6 @@ while(1):
         GPIO.output(IN6,GPIO.LOW)  #motor 5
         temp1=1
         x='z'
-
-    elif x=='r':
-        print("reverse")
-        GPIO.output(IN9,GPIO.HIGH) #motor 6
-        GPIO.output(IN10,GPIO.LOW) #motor 6
-        GPIO.output(IN11,GPIO.HIGH) # motor 3
-        GPIO.output(IN12,GPIO.LOW)  #motor 3
-        temp1=1
-        x='z' 
 
     elif x=='l':
         print("turn left")
