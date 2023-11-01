@@ -102,7 +102,7 @@ while(1):
             GPIO.output(IN2,GPIO.LOW)  #motor 1
             GPIO.output(IN7,GPIO.HIGH) #motor 4
             GPIO.output(IN8,GPIO.LOW) #motor 4
-            print("forward")
+            print("down")
             x='z'
 
     elif x=='s':
