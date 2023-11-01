@@ -97,7 +97,7 @@ while(1):
     
     if x=='r':
         print("run")
-        if(temp1==1):
+      	if(temp1==1):
          GPIO.output(IN1,GPIO.HIGH) #motor 1
          GPIO.output(IN2,GPIO.LOW)  #motor 1
          GPIO.output(IN7,GPIO.HIGH) #motor 4
