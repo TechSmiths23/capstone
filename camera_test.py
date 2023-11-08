@@ -3,7 +3,7 @@ import numpy as np
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(('YOUR_LAPTOP_IP', YOUR_PORT))  # Use the same port as on the Raspberry Pi
+s.bind(('10.229.31.49', 22))  # Use the same port as on the Raspberry Pi
 s.listen(5)
 
 while True:
